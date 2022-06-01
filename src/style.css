@@ -1,0 +1,28 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: #147DF5;
+    background-image: url("Imagenes/burbujasSinfondo.png");
+
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url("Imagenes/algasSinfondo.png");
+    width: 50%;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.button {
+    background-color: blueviolet;
+    margin: auto;
+    margin-top: 100%;
+
+}
