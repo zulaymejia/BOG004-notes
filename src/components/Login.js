@@ -1,41 +1,47 @@
-//import React, { useEffect } from "react";
-// import { collection, getDocs } from "firebase/firestore/lite";
-// import db from "../firebase/firebaseConfig";
-import {
-  GoogleAuthProvider,
-  signInWithPopup,
-} from "../firebase/firebaseController";
 import { useNavigate } from "react-router-dom";
-import "../style.css";
-import  {auth}  from "../firebase/firebaseConfig";
+import "../components/Login.css";
+import { loginGoogle } from "../firebase/firebaseConfig";
 
 //componente que contiene el Login
 function Login() {
   const navigate = useNavigate();
-  const authGoogle = () => {
-    const provider = new GoogleAuthProvider();
-
-    return signInWithPopup(auth, provider)
-    .then((result) => {
-      alert("Wolcome My Noets");
-      navigate("/notes");
-      console.log(result);
-    })
-    .catch((error)=>{
-console.log("ERROR", error)
-    })
+  const loginWithGoogle = () => {
+    loginGoogle()
+      .then((result) => {
+       alert("Wolcome My Noets");
+     
+        navigate("/notes");
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log("ERROR", error);
+      });
   };
   return (
     //JSX como se ve en la interfaz
     <div className="login">
+      <div>
+      <img className="logotipo" src={require("../Imagenes/my notes2.png")} />
+      </div>
       <h1>Wolcome My Notes</h1>
+      <div className="medusaDos">
+      <img className="medusaDos" src={require("../Imagenes/medusa.png")} />
+      <img className="medusaDos" src={require("../Imagenes/medusa.png")} />
+      </div>
+      
+      <div className="medusaUno"><h2 className="medusa"></h2></div>
       <label htmlFor="text"> </label>
-        {
-          <button onClick={authGoogle} className="button">
-            Ingresar con google
-          </button>
-        }
+      {
+        <button onClick={loginWithGoogle} className="button">
+        
+          Ingresar con google
+        </button>
+      }
+    <div className="alga">
+      <img className="alga" src={require("../Imagenes/alga.png")} />
+      </div>
     </div>
+    
   );
 }
 export default Login;

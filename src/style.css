@@ -5,7 +5,7 @@
   }
 
 body {
-    background-color: #147DF5;
+    background-color: rgb(252, 252, 252);
     background-image: url("Imagenes/burbujasSinfondo.png");
 
 }
@@ -14,15 +14,16 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-image: url("Imagenes/algasSinfondo.png");
+    background-image: url("Imagenes/medusaSinfondo.png");
     width: 50%;
     margin: auto;
     margin-top: 2em;
 }
 
 .button {
-    background-color: blueviolet;
+    background-color: rgb(43, 226, 180);
     margin: auto;
     margin-top: 100%;
+    padding: 15px;
 
 }
