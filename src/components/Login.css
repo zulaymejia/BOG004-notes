@@ -15,14 +15,15 @@
     .button {
         display: flex;
         align-items: center;
-        background-color: rgb(76, 193, 248);
+        background-color: rgb(220, 150, 210);
          padding: 10px;
         border-radius: 25px;
+        background-image: url("../Imagenes/gogle2.png");
     
     }
     .medusaDos{  display: flex;
         align-items: center;
-        padding: 20px;
+       
     }
     .logotipo{     display: flex;
         flex-direction: column;

@@ -1,1 +1,1 @@
-export const authGoogle = () => Promise.resolve({});
+export const loginGoogle = () => Promise.resolve({});

@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "../components/Login.css";
 import { loginGoogle } from "../firebase/firebaseConfig";
+console.log("LOGIN", loginGoogle);
 
 //componente que contiene el Login
 function Login() {
@@ -8,7 +9,7 @@ function Login() {
   const loginWithGoogle = () => {
     loginGoogle()
       .then((result) => {
-       alert("Wolcome My Noets");
+      //  alert("Wolcome My Noets");
      
         navigate("/notes");
         console.log(result);
