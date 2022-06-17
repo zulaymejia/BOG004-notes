@@ -22,7 +22,7 @@ function Login() {
     //JSX como se ve en la interfaz
     <div className="login">
       <div>
-      <img className="logotipo" src={require("../Imagenes/my notes2.png")} />
+      <img className="logotipo" src={require("../Imagenes/logo.png")} />
       </div>
       <h1>Wolcome My Notes</h1>
       <div className="medusaDos">

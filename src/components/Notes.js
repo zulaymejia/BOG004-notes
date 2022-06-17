@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { saveNote, getNotes,editNote } from "../firebase/firebaseConfig";
+import { saveNote, getNotes,editNote,deleteNote } from "../firebase/firebaseConfig";
 import { useState, useEffect } from "react";
 import "../components/Notes.css";
 import {Note} from "./Note"
@@ -52,16 +52,21 @@ const Notes = () => {
   const editNoteWall = (note)=>{
 setThisNote(note)
   }
-  const setTitle = (title) =>{
-    setThisNote((prev)=>({...prev,
-      title
-    }))
-  }
-  const setDescription = (description) =>{
-    setThisNote((prev)=>({...prev,
-      description
-    }))
-  }
+const setTitle = (title) =>{
+  setThisNote((prev)=>({...prev,
+    title
+  }))
+}
+const setDescription = (description) =>{
+  setThisNote((prev)=>({...prev,
+    description
+  }))
+}
+//Eliminar nota 
+const delecN=(id)=>{
+  deleteNote(id)
+  getListNotes();
+}
   return (
     <div className="imag">
       <h1 className="title">Wolcome My Notes</h1>
@@ -95,6 +100,7 @@ setThisNote(note)
           title={note.title} 
           description={note.description}
           editNoteWall={() => {editNoteWall(note)}}
+          delecN={() =>{delecN(note.id)}}
           />
         </Fragment>
          
